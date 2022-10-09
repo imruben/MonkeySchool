@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-color: #24252a;
+}
+header {
+  background: rgba(0, 0, 0, 0.5);
+}
+.logo {
+  cursor: pointer;
+  height: 50px;
+  width: auto;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+button:hover,
+#registerbutton:hover {
+  background-color: rgb(42, 153, 32);
+}
+
+#registerbutton {
+  padding: 9px 25px;
+  background-color: blue;
+  margin-left: 10px;
+}
+
+/* HOME */
+/* #home {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  back
+} */
+
+#videomonoshome {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+/* LOGIN */
+
+.login {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#formlogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 450px;
+}
+
+#formlogin label {
+  align-self: flex-start;
+  padding: 10px;
+  color: black;
+}
+
+#formlogin input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.formloginbutton {
+  margin-top: 15px;
+}
+
+#logmessage,
+#registermessage {
+  margin-top: 15px;
+  color: rgb(3, 85, 3);
+}
+
+/* DASHBOARD */
+#closesession {
+  background-color: rgb(175, 31, 31);
+}
+#welcomemessage {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  margin: 50px 150px;
+}
