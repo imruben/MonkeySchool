@@ -1,8 +1,8 @@
 <?php
 
-require 'src\db.php';
+require 'src/db.php';
 require 'config.php';
-require 'src\render.php';
+require 'src/render.php';
 
 
 try {
@@ -11,7 +11,7 @@ try {
         if (isset($_POST['email']) && isset($_POST['password'])) {
             $email = $_REQUEST['email'];
             $password =  $_REQUEST['password'];
-            $result = $db->query("SELECT * FROM USERS WHERE EMAIL = '"  . $email . "'");
+            $result = $db->query("SELECT * FROM users WHERE EMAIL = '"  . $email . "'");
             $user = mysqli_fetch_array($result);
 
             if (!is_null($user) && $user['email'] == $email && password_verify($password, $user['password'])) {
@@ -23,8 +23,12 @@ try {
             }
         }
     }
+    if (isset($_POST['rememberuser'])) {
+        setcookie("username", $user['username'], (time() + (10 * 365 * 24 * 60 * 60)));
+    }
 } catch (mysqli_sql_exception $e) {
     print "Error conexión SQL -> " . $e->getMessage();
 }
+
 
 $loged = false;

@@ -5,9 +5,9 @@
 // tenim dos possibl.
 // 1. Existeix ==> dashboard i 
 // 2. No existeix ==> o retornem a home o ens quedem al login
-require 'src\db.php';
+require 'src/db.php';
 require 'config.php';
-require 'src\render.php';
+require 'src/render.php';
 
 try {
   $db = connectMysql($dbhost, $dbuser, $dbpass, $dbname);
@@ -19,10 +19,12 @@ try {
       $passwordhashed = password_hash($password, PASSWORD_DEFAULT);
 
       $result = false;
+      // print("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
       try {
-        $result = $db->query("INSERT INTO USERS VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
-      } catch (mysqli_sql_exception) {
+        $result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
+      } catch (mysqli_sql_exception $e) {
         $registermessage = "Ya existe una cuenta con ese correo o nombre de usuario.";
+        // $registermessage = $e->getMessage();
         echo render('register', ['registermessage' => $registermessage]);
       }
 

@@ -1,4 +1,8 @@
 <?php
 require 'src/render.php';
 
-echo render('home');
+if (isset($_COOKIE["username"])) {
+    echo render('dashboard');
+} else {
+    echo render('home');
+}

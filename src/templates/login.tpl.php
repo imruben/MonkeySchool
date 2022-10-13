@@ -11,6 +11,8 @@ include 'partials/nav.tpl.php';
         <input type="text" name="password" placeholder="1234" required>
         <p>¿Eres un mono?</p>
         <input type="checkbox" name="ismonkey" required>
+        <p>Recordar-me en aquest equip</p>
+        <input type="checkbox" name="rememberuser" required>
         <button type="submit" class="formloginbutton">Iniciar Sesión</button>
         <p id="logmessage">
             <?php if (isset($logmessage)) {
