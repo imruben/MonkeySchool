@@ -1,6 +1,6 @@
 <?php
 include 'partials/header.tpl.php';
-include 'partials/nav.tpl.php';
+include 'partials/nav2.tpl.php';
 ?>
 
 <div class="login">

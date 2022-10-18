@@ -7,5 +7,6 @@ $routes = [
     'registeraction',
     'dashboard',
     'error',
-    'closesession'
+    'closesession',
+    'privatearea'
 ];

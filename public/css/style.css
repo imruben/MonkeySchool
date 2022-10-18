@@ -140,3 +140,27 @@ button:hover,
   color: white;
   margin: 50px 150px;
 }
+
+/* PRIVATE AREA */
+
+.privatearea {
+  color: white;
+  height: 100%;
+}
+
+h1 {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.privatearea1 {
+  width: 40%;
+  margin: 20px 0 30px 30px;
+}
+
+.privatearea1 h3 {
+  margin-top: 15px;
+}

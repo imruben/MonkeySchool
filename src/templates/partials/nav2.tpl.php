@@ -8,7 +8,7 @@
     </div>
     <nav>
         <ul class="nav__links">
-            <li><a href="#">Nav</a></li>
+            <li><a href="?url=privatearea">Area Privada</a></li>
             <li><a href="#">Nav</a></li>
             <li><a href="#">Nav</a></li>
         </ul>

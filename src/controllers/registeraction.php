@@ -21,9 +21,10 @@ try {
       $result = false;
       // print("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
       try {
-        $result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
+        $result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')");
       } catch (mysqli_sql_exception $e) {
-        $registermessage = "Ya existe una cuenta con ese correo o nombre de usuario.";
+        $registermessage = $e->getMessage();
+        // $registermessage = "Ya existe una cuenta con ese correo o nombre de usuario.";
         // $registermessage = $e->getMessage();
         echo render('register', ['registermessage' => $registermessage]);
       }

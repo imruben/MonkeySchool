@@ -4,7 +4,6 @@ require 'src/db.php';
 require 'config.php';
 require 'src/render.php';
 
-
 try {
     $db = connectMysql($dbhost, $dbuser, $dbpass, $dbname);
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -15,9 +14,11 @@ try {
             $user = mysqli_fetch_array($result);
 
             if (!is_null($user) && $user['email'] == $email && password_verify($password, $user['password'])) {
-                $_SESSION['username'] = $user['username'];
+                $_SESSION['user'] = $user;
+                $db->query("UPDATE users SET last_visit = '" . date("Y-m-d H:i:s") . "' WHERE EMAIL = '"  . $email . "'");
                 echo render('dashboard');
             } else {
+                // $logmessage = $result;
                 $logmessage = "Cuenta incorrecta";
                 echo render('login', ['logmessage' => $logmessage]);
             }
@@ -29,6 +30,5 @@ try {
 } catch (mysqli_sql_exception $e) {
     print "Error conexión SQL -> " . $e->getMessage();
 }
-
 
 $loged = false;
