@@ -8,5 +8,6 @@ $routes = [
     'dashboard',
     'error',
     'closesession',
-    'privatearea'
+    'privatearea',
+    'usersettings'
 ];

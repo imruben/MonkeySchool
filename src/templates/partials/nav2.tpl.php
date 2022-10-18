@@ -13,5 +13,7 @@
             <li><a href="#">Nav</a></li>
         </ul>
     </nav>
+    <a id="settingsbutton" class="button" href="?url=usersettings"><i id="settingsicon" class="material-icons">settings</i>
+        Configuració</a>
     <a href="?url=closesession"><button id="closesession">Cerrar sesion</button></a>
 </header>

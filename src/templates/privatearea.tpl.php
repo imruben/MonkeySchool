@@ -24,7 +24,9 @@ include 'partials/nav2.tpl.php';
         <h3>Contrasenya: <?php print $_SESSION['user']['password'] ?> </h3>
         <h3>Email: <?php print $_SESSION['user']['email'] ?></h3>
     </div>
-    <div class="privatearea2"></div>
+    <div class="privatearea2">
+
+    </div>
 
 
 </div>
