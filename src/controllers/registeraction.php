@@ -17,10 +17,10 @@ try {
       $username = $_REQUEST['username'];
       $password =  $_REQUEST['password'];
       $passwordhashed = password_hash($password, PASSWORD_DEFAULT);
-
       $result = false;
       // print("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
       try {
+        // print "INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')";
         $result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')");
       } catch (mysqli_sql_exception $e) {
         $registermessage = $e->getMessage();

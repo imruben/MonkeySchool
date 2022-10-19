@@ -9,5 +9,6 @@ $routes = [
     'error',
     'closesession',
     'privatearea',
-    'usersettings'
+    'usersettings',
+    'usersettingsaction'
 ];

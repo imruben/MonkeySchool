@@ -10,9 +10,9 @@ include 'partials/nav.tpl.php';
         <label for="password">Contraseña</label>
         <input type="text" name="password" placeholder="1234" required>
         <p>¿Eres un mono?</p>
-        <input type="checkbox" name="ismonkey" required>
+        <input type="checkbox" name="ismonkey">
         <p>Recordar-me en aquest equip</p>
-        <input type="checkbox" name="rememberuser" required>
+        <input type="checkbox" name="rememberuser">
         <button type="submit" class="formloginbutton">Iniciar Sesión</button>
         <p id="logmessage">
             <?php if (isset($logmessage)) {
