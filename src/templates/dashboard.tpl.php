@@ -7,7 +7,6 @@ include 'partials/nav2.tpl.php';
 <div id="welcomemessage">
     <h1><?php print "Bienvenido " . $_SESSION['user']['username'] ?></h1>
     <h3> <?php print "Ultima visita: " . $_SESSION['user']['last_visit']; ?></h3>
-    <p><?php print $_COOKIE['usersettings'] ?></p>
 </div>
 
 </html>

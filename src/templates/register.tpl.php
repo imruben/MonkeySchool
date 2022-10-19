@@ -10,9 +10,9 @@ include 'partials/nav.tpl.php';
         <label for="username">Nombre de usuario</label>
         <input type="text" name="username" id="" placeholder="pepeViyuela" required><br><br>
         <label for="password">Contraseña</label>
-        <input type="text" name="password" placeholder="1234" required>
+        <input type="password" name="password" placeholder="1234" required>
         <p>¿Eres un mono?</p>
-        <input type="checkbox" name="ismonkey">
+        <input type="checkbox" name="ismonkey" required>
         <button type="submit" class="formloginbutton">Registrarse</button>
         <p id="registermessage">
             <?php if (isset($registermessage)) {

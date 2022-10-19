@@ -1,9 +1,10 @@
 <?php
 include 'partials/header.tpl.php';
 include 'partials/nav2.tpl.php';
+
 ?>
 
-
+<script src="src\scripts\usersettings.js"></script>
 <div class="privatearea">
     <h1>AREA PRIVADA</h1>
     <div class="privatearea1">

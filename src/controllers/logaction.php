@@ -10,7 +10,8 @@ try {
         if (isset($_POST['email']) && isset($_POST['password'])) {
             $email = $_REQUEST['email'];
             $password =  $_REQUEST['password'];
-            $result = $db->query("SELECT * FROM users WHERE EMAIL = '"  . $email . "'");
+            $queryverifyuser = "SELECT * FROM users WHERE EMAIL = '"  . $email . "'";
+            $result = $db->query($queryverifyuser);
             $user = mysqli_fetch_array($result);
 
             if (!is_null($user) && $user['email'] == $email && password_verify($password, $user['password'])) {
