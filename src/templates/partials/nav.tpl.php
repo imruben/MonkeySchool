@@ -10,8 +10,7 @@
         </ul>
     </nav>
     <div>
-        <a href="?url=login"><button id="loginbutton">Iniciar sesión</button></a>
-        <a href="?url=register"><button id="registerbutton">Registrarse</button></a>
+        <a><button id="loginbutton">Iniciar sesión</button></a>
+        <a><button id="registerbutton">Registrarse</button></a>
     </div>
-    <!-- <script src="src\scripts\logandreg.js"></script> -->
 </header>
