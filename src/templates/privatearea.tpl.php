@@ -21,14 +21,12 @@ include 'partials/nav2.tpl.php';
                 } */ ?>
             </p>
         </form> -->
+        <img id="imgprivatearea" src="public\img\monoperfil.webp" alt="">
         <p><b>Usuari:</b> <?php print $_SESSION['user']['username'] ?></p>
         <p><b>Email:</b> <?php print $_SESSION['user']['email'] ?></p>
     </div>
     <div class="privatearea2">
-
     </div>
-
-
 </div>
 
 </HTML>

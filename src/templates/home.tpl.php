@@ -10,6 +10,24 @@ include 'partials/nav.tpl.php';
     </video>
 </div>
 
+<!-- Mensajes de error de login o de register correcto si 
+ha llegado la variable del mensaje del logaction o registeraction -->
+<?php if (isset($logmessage)) {
+    print '
+    <p id="logmessageerror">
+     ' . $logmessage . '
+    </p>';
+    unset($logmessage);
+} else if (isset($registermessage)) {
+    print '
+    <p id="registermessage">
+     ' . $registermessage . '
+    </p>';
+    unset($registermessage);
+}
+?>
+
+
 <div class="loginmodal hidden">
     <form class="formlogin" action="?url=logaction" method='POST'>
         <label for="email">Email</label>
@@ -21,11 +39,7 @@ include 'partials/nav.tpl.php';
         <p>Recordar-me en aquest equip</p>
         <input type="checkbox" name="rememberuser">
         <button type="submit" class="formloginbutton">Iniciar Sesión</button>
-        <p id="logmessage">
-            <?php if (isset($logmessage)) {
-                print $logmessage;
-            } ?>
-        </p>
+
     </form>
 </div>
 
@@ -41,11 +55,7 @@ include 'partials/nav.tpl.php';
         <p>¿Eres un mono?</p>
         <input type="checkbox" name="ismonkey" required>
         <button type="submit" class="formloginbutton">Registrarse</button>
-        <p id="registermessage">
-            <?php if (isset($registermessage)) {
-                print $registermessage;
-            } ?>
-        </p>
+
     </form>
 </div>
 

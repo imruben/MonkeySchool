@@ -1,5 +1,5 @@
 <header>
-    <a href="?url=home">
+    <a href="#">
         <img class="logo" src="public/img/logo.png" alt="Viva los monos">
     </a>
     <nav>

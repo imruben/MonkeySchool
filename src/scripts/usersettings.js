@@ -1,3 +1,5 @@
+//script para leer los settings de la cookie 'usersettings' y aplicar los cambios con DOM
+
 const cookies = document.cookie;
 
 // const backgroundcolor = cookie.get("usersettings");
