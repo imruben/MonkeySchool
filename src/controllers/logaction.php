@@ -42,7 +42,7 @@ try {
         }
     }
     //catcheamos si hay algun error en la conexion sql
-} catch (mysqli_sql_exception $e) {
+} catch (PDOException $e) {
     print "Error conexión SQL -> " . $e->getMessage();
 }
 

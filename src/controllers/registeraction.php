@@ -24,7 +24,10 @@ try {
       // print("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "')");
       try {
         // print "INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')";
-        $result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')");
+        ////$result = $db->query("INSERT INTO users VALUES(null,'" . $email . "','" . $username . "','" . $passwordhashed . "','" . date("Y-m-d H:i:s") . "')");
+        $stmt=$db->prepare("INSERT INTO USERS(username, email, password) VALUES(?,?,?)");
+        $res = $stmt->execute(array($username, $email, $passwordCrypt));
+
         //si falla el registro(el insert en la bd) -> volvemos al home y se lo enseñamos al usuario
       } catch (mysqli_sql_exception $e) {
         $registermessage = $e->getMessage();
@@ -41,6 +44,6 @@ try {
       }
     }
   }
-} catch (mysqli_sql_exception $e) {
+} catch (PDOException $e) {
   print "Error SQL -> " . $e->getMessage();
 }
