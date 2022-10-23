@@ -29,7 +29,7 @@ ha llegado la variable del mensaje del logaction o registeraction -->
 
 
 <div class="loginmodal hidden">
-    <form class="formlogin" action="?url=logaction" method='POST'>
+    <form class="formlogin animate" action="?url=logaction" method='POST'>
         <label for="email">Email</label>
         <input type="text" name="email" placeholder="youremail@gmail.com" required><br><br>
         <label for="password">Contraseña</label>
@@ -45,7 +45,7 @@ ha llegado la variable del mensaje del logaction o registeraction -->
 
 
 <div class="registermodal hidden">
-    <form class="formlogin" action="?url=registeraction" method='POST'>
+    <form class="formlogin animate" action="?url=registeraction" method='POST'>
         <label for="email">Email</label>
         <input type="text" name="email" placeholder="youremail@gmail.com" required><br><br>
         <label for="username">Nombre de usuario</label>
