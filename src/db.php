@@ -16,7 +16,7 @@ function connectMysql(string $dsn, string $dbuser, string $dbpass)
 
 function auth(PDO $db, string $email, string $password): bool
 {
-    $stmt = $db->prepare("SELECT * FROM USERS WHERE email=:email LIMIT 1");
+    $stmt = $db->prepare("SELECT * FROM users WHERE email=:email LIMIT 1");
     $res = $stmt->execute([':email' => $email]);
     //si existe una cuenta con ese email->pasamos a verificar pwd
     if ($stmt->rowCount() > 0) {

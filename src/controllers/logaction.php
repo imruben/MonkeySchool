@@ -3,7 +3,7 @@
 require 'src/db.php';
 require 'config.php';
 require 'src/render.php';
-require 'src\model\validateFunctions.php';
+require 'src/model/validateFunctions.php';
 
 
 //si el form devuelve datos del post(con el html se supone que ha tenido que rellenar datos 'required')

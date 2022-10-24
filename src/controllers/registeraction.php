@@ -26,7 +26,7 @@ try {
       try {
         //insert con datgios del form + fecha actual
         $actualdate = date("Y-m-d H:i:s");
-        $stmt = $db->prepare("INSERT INTO USERS(username, email, password, last_visit ) VALUES(?,?,?,?)");
+        $stmt = $db->prepare("INSERT INTO users(username, email, password, last_visit ) VALUES(?,?,?,?)");
         $res = $stmt->execute(array($username, $email, $passwordhashed, $actualdate));
 
         //si falla el registro(el insert en la bd) -> volvemos al home y se lo enseñamos al usuario

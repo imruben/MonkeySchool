@@ -9,8 +9,8 @@
 
 
 //dades d'accés a .env
-$dbhost = "localhost";
-$dbname = "school";
+$dbhost = "sql.freedb.tech";
+$dbname = "freedb_schools";
 $dsn = "mysql:host={$dbhost};dbname={$dbname};charset=utf8mb4";
-$dbuser = "root";
-$dbpass = "";
+$dbuser = "freedb_ruben";
+$dbpass = "BpS9CGB?xGpcA@t";

@@ -1,5 +1,5 @@
 //script para abrir y cerrar los modals de login y register con los dos botones del home
-
+//forzamos a definir tipos
 "use strict";
 
 const loginmodal = document.querySelector(".loginmodal");
