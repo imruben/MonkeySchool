@@ -4,6 +4,8 @@ include 'partials/nav2.tpl.php';
 
 ?>
 
+<!-- Area privada del usuario que ha iniciado sesión -->
+
 <script src="src\scripts\usersettings.js"></script>
 <div class="privatearea">
     <h1>AREA PRIVADA</h1>

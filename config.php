@@ -7,8 +7,8 @@
 // $dbuser = "e41lBhoKDg";
 // $dbpass = "ucDEH223f7";
 
+//datos de acceso a la bd
 
-//dades d'accés a .env
 $dbhost = "sql.freedb.tech";
 $dbname = "freedb_schools";
 $dsn = "mysql:host={$dbhost};dbname={$dbname};charset=utf8mb4";

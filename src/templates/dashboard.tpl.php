@@ -1,3 +1,5 @@
+<!-- pagina principal del usuario con sesión iniciada  -->
+
 <?php
 
 include 'partials/header.tpl.php';

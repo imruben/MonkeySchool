@@ -3,7 +3,7 @@ include 'partials/header.tpl.php';
 include 'partials/nav.tpl.php';
 ?>
 
-
+<!-- Pagina principal mientras no se haya iniciado sesion -->
 <div id="home">
     <video id="videomonoshome" autoplay loop muted>
         <source src="public\img\monoshome.mp4" type="video/mp4">
@@ -27,7 +27,7 @@ ha llegado la variable del mensaje del logaction o registeraction -->
 }
 ?>
 
-
+<!-- modal para logear  -->
 <div class="loginmodal hidden">
     <form class="formlogin animate" action="?url=logaction" method='POST'>
         <label for="email">Email</label>
@@ -43,7 +43,7 @@ ha llegado la variable del mensaje del logaction o registeraction -->
     </form>
 </div>
 
-
+<!-- modal para registrarse -->
 <div class="registermodal hidden">
     <form class="formlogin animate" action="?url=registeraction" method='POST'>
         <label for="email">Email</label>
@@ -58,8 +58,10 @@ ha llegado la variable del mensaje del logaction o registeraction -->
 
     </form>
 </div>
-
+<!-- overlay necesario para hacer la animación de los modals -->
 <div class="overlay hidden"></div>
+
+<!-- scripts para los modals -->
 <script src="src\scripts\modalshome.js"></script>
 
 </html>

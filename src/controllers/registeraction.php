@@ -13,7 +13,6 @@ try {
   //conexion a la bd
   $db = connectMysql($dsn, $dbuser, $dbpass);
 
-
   //validacion del form y insertamos los datos en la bd
   if (!empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['username'])) {
     if (isset($_POST['email']) && isset($_POST['password'])) {
@@ -24,25 +23,23 @@ try {
       $passwordhashed = password_hash($password, PASSWORD_DEFAULT);
       $result = false;
       try {
-        //insert con datgios del form + fecha actual
+        //insert con datos del form + fecha actual para guardar la ultima visita
         $actualdate = date("Y-m-d H:i:s");
         $stmt = $db->prepare("INSERT INTO users(username, email, password, last_visit ) VALUES(?,?,?,?)");
         $res = $stmt->execute(array($username, $email, $passwordhashed, $actualdate));
 
-        //si falla el registro(el insert en la bd) -> volvemos al home y se lo enseñamos al usuario
+        //registro en la bd correcto -> llevamos a home y informamos al usuario con la funcion 'render'
+        $registermessage = "Cuenta creada correctamente. Puedes iniciar sesión 🐵 ";
+        echo render('home', ['registermessage' => $registermessage]);
+
+
+        //si falla el registro(el insert en la bd) -> volvemos al home y se lo enseñamos al usuario pasando el mensaje con la funcion 'render'
       } catch (PDOException $e) {
         $registermessage = "Error en el registro.Consulte a don Piqueres ->" . $e->getMessage();
         //Si el codigo = 23000 -> error de unique key (username o email)
         if ($e->getCode() == 23000) {
           $registermessage = "Ya existe un usuario con ese nombre o correo 🙊";
         }
-        echo render('home', ['registermessage' => $registermessage]);
-      }
-
-      if (!$res) {
-      } else {
-        //registro en la bd correcto -> llevamos a home y informamos al usuario
-        $registermessage = "Cuenta creada correctamente. Puedes iniciar sesión 🐵 ";
         echo render('home', ['registermessage' => $registermessage]);
       }
     }

@@ -1,5 +1,5 @@
 //script para abrir y cerrar los modals de login y register con los dos botones del home
-//forzamos a definir tipos
+
 "use strict";
 
 const loginmodal = document.querySelector(".loginmodal");
@@ -8,12 +8,9 @@ const overlay = document.querySelector(".overlay");
 
 const registeremodal = document.querySelector(".registermodal");
 const btnregistermodal = document.querySelector("#registerbutton");
-// const btnCloseModal = document.querySelector(".close-modal");
 
-// console.log(loginmodal);
-// console.log(btnloginmodal);
-// console.log(overlay);
-
+//funciones para abrir y cerrar el modal
+//->añaden o quitan la clase 'hidden' de css
 const openModalLogin = function () {
   loginmodal.classList.remove("hidden");
   overlay.classList.remove("hidden");
@@ -30,15 +27,14 @@ const closeModal = function () {
   overlay.classList.add("hidden");
 };
 
+//añade las funciones a los botones con eventlisteners
 btnloginmodal.addEventListener("click", openModalLogin);
 btnregistermodal.addEventListener("click", openModalRegister);
 
-// btnloginmodal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
+//con escape tambien se puede salir del modal a parte de clickando fuera
 document.addEventListener("keydown", function (e) {
-  // console.log(e.key);
-
   if (
     e.key === "Escape" &&
     (!loginmodal.classList.contains("hidden") ||

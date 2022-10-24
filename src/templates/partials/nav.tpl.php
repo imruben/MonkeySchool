@@ -1,3 +1,5 @@
+<!-- nav para cuando el usuario NO haya iniciado sesion -->
+
 <header>
     <a href="#">
         <img class="logo" src="public/img/logo.png" alt="Viva los monos">

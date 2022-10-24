@@ -1,6 +1,7 @@
 <?php
 // http://localhost:3000/src/model/validatefunctions.php
 
+
 // if (isset($_COOKIE['user_remembered'])) {
 //     $userRemembered = $_COOKIE['user_remembered'];
 //     print $userRemembered;

@@ -1,5 +1,7 @@
-<header>
+<!-- nav para cuando el usuario haya iniciado sesion -->
 
+
+<header>
     <div class="caja1">
         <div class="cosa">
             <a href="?url=dashboard">
