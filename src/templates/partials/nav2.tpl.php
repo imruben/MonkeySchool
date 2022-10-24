@@ -1,6 +1,5 @@
 <!-- nav para cuando el usuario haya iniciado sesion -->
 
-
 <header>
     <div class="caja1">
         <div class="cosa">
@@ -12,10 +11,13 @@
 
 
     <div class="caja2">
-        <a id="settingsbutton" class="button" href="?url=usersettings"><i id="settingsicon" class="material-icons">settings</i>
+        <i id="settingsicon" class="material-icons">settings</i>
+        <a id="settingsbutton" class="navlink button" href="?url=usersettings">
             Configuració</a>
-        <a class="derecha" href="?url=privatearea">Area Privada</a>
+        <a class="navlink derecha" href="?url=privatearea">Area Privada</a>
         <a href="?url=closesession"><button id="closesession">Cerrar sesion</button></a>
     </div>
 
 </header>
+<!-- script js para que se vea visualmente donde se encuentra el usuario -->
+<script src="src\scripts\nav.js"></script>

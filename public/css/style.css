@@ -35,6 +35,11 @@ header {
 .nav__links {
   list-style: none;
 }
+.navlink[aria-current="page"] {
+  /* color: rgb(68, 45, 45); */
+  text-decoration: underline wavy white 0.15rem;
+  text-underline-offset: 0.5rem;
+}
 
 .nav__links li {
   display: inline-block;
@@ -96,6 +101,7 @@ button:hover,
   height: 25px;
   width: auto;
   margin-right: 3px;
+  color: white;
 }
 
 #settingsbutton {
