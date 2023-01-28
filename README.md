@@ -1,9 +1,10 @@
-# Proyecto PHP Escuela de Monos
+# Monkey school
+School's web styled with a monkey theme.
 
-## Integra:
-- Control de autenticación (login y register)
-- Dashboard de usuarios, profesores.
-- Areas privadas con configuración por cookies y js.
+## Integrate
+- Authentication control (login and register)
+- Dashboard of users, teachers.
+- Private areas with configuration by cookies and js.
 
-## Usando: 
-- OOP PHP (MVC) y js.
+## Using 
+- OOP PHP (MVC) and js.
